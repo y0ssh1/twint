@@ -17,7 +17,7 @@ class NoMoreTweetsException(Exception):
 
 def Follow(response):
     logme.debug(__name__ + ':Follow')
-    print(response)
+    logme.debug(response)
     soup = BeautifulSoup(response, "html.parser")
     follow = soup.find_all("td", "info fifty screenname")
     cursor = soup.find_all("div", "w-button-more")
